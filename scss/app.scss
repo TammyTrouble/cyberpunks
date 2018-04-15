@@ -1,0 +1,162 @@
+@charset 'utf-8';
+
+@import 'settings';
+@import 'foundation';
+@import 'motion-ui';
+
+@include foundation-global-styles;
+@include foundation-grid;
+// @include foundation-flex-grid;
+@include foundation-typography;
+@include foundation-button;
+@include foundation-forms;
+// @include foundation-range-input;
+@include foundation-accordion;
+@include foundation-accordion-menu;
+@include foundation-badge;
+@include foundation-breadcrumbs;
+@include foundation-button-group;
+@include foundation-callout;
+@include foundation-close-button;
+@include foundation-menu;
+@include foundation-menu-icon;
+@include foundation-drilldown-menu;
+@include foundation-dropdown;
+@include foundation-dropdown-menu;
+//@include foundation-flex-video;
+@include foundation-label;
+@include foundation-media-object;
+@include foundation-off-canvas;
+@include foundation-orbit;
+@include foundation-pagination;
+@include foundation-progress-bar;
+@include foundation-progress-element;
+// @include foundation-meter-element;
+@include foundation-slider;
+@include foundation-sticky;
+@include foundation-reveal;
+@include foundation-switch;
+@include foundation-table;
+@include foundation-tabs;
+@include foundation-thumbnail;
+@include foundation-title-bar;
+@include foundation-tooltip;
+@include foundation-top-bar;
+@include foundation-visibility-classes;
+@include foundation-float-classes;
+// @include foundation-flex-classes;
+
+@include motion-ui-transitions;
+@include motion-ui-animations;
+
+/*@media (min-width: 1024px) {
+  body {
+    margin: 2em 10em 2em 10em;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  body {
+    margin: 2em;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    margin: .6em;
+  }
+}*/
+
+$font-stack:	Helvetica, sans-serif;
+$background-color: #c5c4c0;
+$eandmblue: #227994;
+
+
+body {
+	background-color: #c5c4c0;
+	font: 100% $font-stack;
+}
+
+#title-bar {
+	background-color: $eandmblue;
+	margin-bottom: .5em;
+}
+
+.top-bar {
+	background: #227994;
+	margin-bottom: 1em;
+}
+
+.action-button {
+	@include button(
+		$expand:true
+	);
+	border-style: outset;
+	border-width: thin;
+	border-color: burlywood;
+	background: rgba(0,0,0,.15);
+}
+
+.action-pad {
+	padding: 18px 0 18px 0;
+}
+
+#alley {
+	background: darken( $background-color, 17% );
+	border-radius: .15em;
+    border-style: outset;
+    border-width: thin;
+    border-color: darkgray;	
+}
+
+#research {
+	background: darken( $background-color, 10% );
+	margin: .25em 0 .25em 0;
+	padding: .3em;
+	border-style: groove;
+	border-color: lighten( $eandmblue, 5% );
+	border-radius: .35em;
+	border-width: thick;
+}
+
+#litterbox {
+	$temp: darken( $background-color, 15% );
+	background: saturate( $temp, 30% );
+	border-radius: .5em;
+}
+
+@media (max-width: 1024px) {
+	#alley {
+		margin: 0 .2em .2em .2em;
+	}
+	#litterbox {
+		margin: 0 .2em 0 .2em;
+	}
+}
+
+.button.secondary {
+	background-color: transparent;
+	background: rgba(100,100,75,.09);
+}
+
+
+@media (min-width: 1024px) {
+  .action-button {
+
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  .action-button {
+    margin: 0 0 .5em 0;
+  }
+}
+
+@media (max-width: 600px) {
+  	.action-button {
+    	margin: 0 0 .25em 0;
+  	}
+  	#litterbox > div > h3 {
+  		display: none;
+  	}
+}
